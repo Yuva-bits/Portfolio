@@ -74,7 +74,7 @@ const Landing = () => {
               <div className="space-y-8">
                 <div>
                   <p 
-                    className="text-xl lg:text-2xl text-gray-300 leading-relaxed"
+                    className="text-lg lg:text-xl text-gray-300 leading-relaxed"
                     style={{ textAlign: 'justify' }}
                   >
                     I design and deliver intelligent software solutions that combine full-stack engineering, AI/ML, cloud, and cybersecurity. My focus is on transforming complex data into actionable insights and building scalable, user-focused systems that drive efficiency, strengthen security, and enable smarter decision-making. I bridge technical depth with business impact, helping organizations innovate faster, smarter, and at scale.
@@ -114,7 +114,7 @@ const Landing = () => {
                       src="/Portfolio/profile.jpeg"
                   alt="Yuvashree Senthilmurugan" 
                       className="w-full h-full object-cover rounded-lg"
-                      style={{ objectPosition: "center 35%" }}
+                      style={{ objectPosition: "center 25%" }}
                 />
                   </div>
                 </div>
