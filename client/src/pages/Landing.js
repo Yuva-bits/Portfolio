@@ -57,12 +57,12 @@ const Landing = () => {
         
         <div className="container mx-auto px-6 z-10 max-w-7xl">
           {/* Centered Hero Text */}
-          <div className="text-center py-20">
+          <div className="text-center py-16 lg:py-20">
             <TextReveal
               text="Hi, I'm Yuvashree Senthilmurugan"
               animation="fade"
               delay={0}
-              className="text-4xl md:text-6xl font-bold gradient-heading mb-6 leading-tight"
+              className="text-4xl md:text-6xl font-bold gradient-heading mb-4 leading-tight"
               trigger="mount"
             />
             
@@ -70,7 +70,7 @@ const Landing = () => {
               text="Full-Stack Software Developer | AI/ML Engineer | Building Scalable Cloud & Cybersecurity Solutions"
               animation="fade"
               delay={100}
-              className="text-lg lg:text-xl text-gray-200 font-bold leading-relaxed max-w-4xl mx-auto block"
+              className="text-sm lg:text-base xl:text-lg text-gray-200 font-bold leading-tight max-w-7xl mx-auto block px-4"
               trigger="mount"
             />
           </div>
