@@ -57,7 +57,7 @@ const Landing = () => {
         <div className="container mx-auto px-6 z-10 max-w-7xl">
           {/* Centered Hero Text */}
           <div className="text-center py-12 lg:py-16">
-            <div className="space-y-6">
+            <div className="space-y-2">
               <h1 className="text-4xl md:text-6xl font-bold gradient-heading leading-tight animate-fade-in">
                 Hi, I'm Yuvashree Senthilmurugan
               </h1>
