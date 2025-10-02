@@ -30,10 +30,6 @@ const Landing = () => {
   
   return (
     <div className="min-h-screen bg-gray-900 text-white">
-      {/* Test div to ensure rendering */}
-      <div className="absolute top-4 left-4 bg-red-500 text-white p-2 z-50 text-sm">
-        Landing Component Loaded - {new Date().toLocaleTimeString()}
-      </div>
       
       <ParticleBackground 
         particleCount={80}
@@ -84,7 +80,10 @@ const Landing = () => {
             <div className="order-2 lg:order-1 text-center lg:text-left">
               <div className="space-y-8">
                 <div className="max-w-2xl mx-auto lg:mx-0">
-                  <p className="text-lg text-gray-300 leading-relaxed text-justify">
+                  <p 
+                    className="text-lg text-gray-300 leading-relaxed"
+                    style={{ textAlign: 'justify' }}
+                  >
                     I build intelligent software solutions combining full-stack engineering, AI/ML, cloud, and cybersecurity to solve complex business challenges. I transform data into actionable insights, creating scalable systems that drive efficiency, enhance security, and enable smarter decision-making.
                   </p>
                 </div>
