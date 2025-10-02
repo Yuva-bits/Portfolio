@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import TextReveal from '../components/TextReveal';
+import ParticleBackground from '../components/ParticleBackground';
 
 const Landing = () => {
   console.log('Landing component is rendering');
@@ -26,7 +27,7 @@ const Landing = () => {
     
     fetchFeaturedProjects();
   }, []);
-
+  
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Test div to ensure rendering */}
@@ -34,28 +35,50 @@ const Landing = () => {
         Landing Component Loaded - {new Date().toLocaleTimeString()}
       </div>
       
+      <ParticleBackground 
+        particleCount={80}
+        particleColor="#6366f1"
+        particleSize={3}
+        animationSpeed={0.5}
+        interactive={true}
+      />
+      
       {/* Hero Section */}
-      <section className="relative py-24 flex items-center justify-center min-h-screen">
-        <div className="container mx-auto px-6 text-center max-w-7xl">
+      <section className="relative py-24 flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-800/50 to-gray-900/50">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-purple-900/10 to-pink-900/10"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-500/10 via-purple-500/5 to-transparent"></div>
+          <svg className="absolute bottom-0 left-0 right-0 transform translate-y-1/2 blur-3xl opacity-20" xmlns="http://www.w3.org/2000/svg" width="100%" height="580">
+            <defs>
+              <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%">
+                <stop offset="0%" stopColor="#6366f1" />
+                <stop offset="100%" stopColor="#8b5cf6" />
+              </linearGradient>
+            </defs>
+            <path fill="url(#a)" d="M 0 0 C 473 223 822 330 1440 431 L 1440 580 L 0 580 L 0 0 Z" />
+          </svg>
+        </div>
+        
+        <div className="container mx-auto px-6 z-10 max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left Column - Text Content */}
             <div className="md:w-1/2 order-2 md:order-1 mb-8 md:mb-0">
-              <TextReveal
-                text="Hi, I'm Yuvashree Senthilmurugan"
+            <TextReveal
+              text="Hi, I'm Yuvashree Senthilmurugan"
                 animation="fade"
                 delay={0}
                 className="text-6xl font-bold gradient-heading mb-6"
-                trigger="mount"
-              />
+              trigger="mount"
+            />
               
-              <TextReveal
+            <TextReveal
                 text="Full-Stack Software Developer | AI/ML Engineer | Building Scalable Cloud & Cybersecurity Solutions"
-                animation="fade"
+              animation="fade"
                 delay={100}
                 className="text-2xl text-gray-200 font-bold block"
-                trigger="mount"
-              />
-              
+              trigger="mount"
+            />
+          
               <p className="text-xl text-gray-300 mb-10 leading-relaxed text-justify">
                 I build intelligent software solutions combining full-stack engineering, AI/ML, cloud, and cybersecurity to solve complex business challenges. I transform data into actionable insights, creating scalable systems that drive efficiency, enhance security, and enable smarter decision-making. My strength lies in bridging deep technical expertise with practical outcomes—delivering solutions that create measurable impact at scale.
               </p>
@@ -82,13 +105,21 @@ const Landing = () => {
             
             {/* Right Column - Image */}
             <div className="md:w-1/2 order-1 md:order-2 mb-8 md:mb-0 relative">
-              <div className="rounded-2xl h-96 overflow-hidden mx-auto relative">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-xl transform rotate-3"></div>
+                <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-2 border border-gray-700/50">
+                  <div className="rounded-2xl h-96 overflow-hidden relative">
                 <img 
-                  src="/Portfolio/profile.jpeg"
+                      src="/Portfolio/profile.jpeg"
                   alt="Yuvashree Senthilmurugan" 
                   className="h-full w-full object-cover rounded-xl"
                   style={{ objectPosition: "center top" }}
                 />
+                  </div>
+                </div>
+                {/* Decorative Glowing Orbs */}
+                <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-500/30 rounded-full blur-sm animate-pulse"></div>
+                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-purple-500/30 rounded-full blur-sm animate-pulse delay-1000"></div>
               </div>
             </div>
           </div>
@@ -207,7 +238,7 @@ const Landing = () => {
                   <div key={index} className="px-2 py-1 bg-gray-700/30 rounded-lg">{skill}</div>
                 ))}
               </div>
-            </div>
+                </div>
 
             {/* Networking and Security */}
             <div className="group relative flex flex-col items-center text-center p-8 bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-xl border border-gray-700/50 hover:border-blue-500/50 rounded-3xl transition-all duration-700 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-3 overflow-hidden">
@@ -215,11 +246,11 @@ const Landing = () => {
                 <svg className="w-10 h-10 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
-              </div>
+                </div>
               <div className="relative z-10">
                 <h3 className="text-xl font-bold text-white group-hover:text-blue-300 transition-colors duration-300 mb-3">Networking and Security</h3>
                 <div className="w-0 group-hover:w-20 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-500 mx-auto mb-3"></div>
-              </div>
+                </div>
               <p className="relative z-10 text-gray-400 group-hover:text-gray-200 text-sm mb-6 leading-relaxed transition-colors duration-300">Cybersecurity and network technologies</p>
               <div className="relative z-10 space-y-2 text-gray-300 text-sm leading-relaxed">
                 {['pfctl • iptables • OpenVPN', 'WireGuard • IKEv2/IPSec • Cisco AnyConnect', 'Wireshark • Nmap • Nikto • Metasploit', 'TCP/UDP/ICMP/ARP'].map((skill, index) => (
@@ -238,7 +269,7 @@ const Landing = () => {
           </div>
         </div>
       </section>
-
+      
       {/* Featured Projects Section */}
       <section id="featured-projects" className="py-24 bg-gradient-to-br from-gray-800/50 to-gray-900/50">
         <div className="container mx-auto px-6 max-w-7xl">
@@ -363,4 +394,4 @@ const Landing = () => {
   );
 };
 
-export default Landing;
+export default Landing; 
