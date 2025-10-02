@@ -373,7 +373,7 @@ const Landing = () => {
           </p>
           
           <div className="flex flex-wrap gap-6 justify-center">
-            <a href="mailto:contact@example.com">
+            <a href="mailto:yuvashreesenthil@gmail.com">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
               Get In Touch
               </button>
