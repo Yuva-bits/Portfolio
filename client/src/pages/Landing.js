@@ -62,7 +62,7 @@ const Landing = () => {
               text="Hi, I'm Yuvashree Senthilmurugan"
               animation="fade"
               delay={0}
-              className="text-5xl lg:text-7xl font-bold gradient-heading mb-6 leading-tight"
+              className="text-3xl lg:text-5xl font-bold gradient-heading mb-6 leading-tight"
               trigger="mount"
             />
             
@@ -70,7 +70,7 @@ const Landing = () => {
               text="Full-Stack Software Developer | AI/ML Engineer | Building Scalable Cloud & Cybersecurity Solutions"
               animation="fade"
               delay={100}
-              className="text-xl lg:text-2xl text-gray-200 font-bold leading-relaxed max-w-4xl mx-auto"
+              className="text-lg lg:text-xl text-gray-200 font-bold leading-relaxed max-w-4xl mx-auto block"
               trigger="mount"
             />
           </div>
