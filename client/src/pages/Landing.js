@@ -143,7 +143,7 @@ const Landing = () => {
             <div className="md:w-1/2 order-1 md:order-2 mb-8 md:mb-0 relative">
               <div className="rounded-2xl h-96 overflow-hidden mx-auto relative">
                 <img 
-                  src="/profile.jpeg" 
+                  src={`${process.env.PUBLIC_URL || ''}/profile.jpeg`}
                   alt="Yuvashree Senthilmurugan" 
                   className="h-full w-full object-cover rounded-xl"
                   style={{ objectPosition: "center top" }}

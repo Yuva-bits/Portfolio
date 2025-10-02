@@ -4,26 +4,37 @@
 // Content API Functions - now reads from static JSON files
 export const getPageContent = async (pageName) => {
   try {
-    // For GitHub Pages, we read from static JSON files in the public/data directory
-    // Try multiple possible paths to ensure compatibility
+    // For GitHub Pages, we need to handle the subdirectory structure
+    const baseUrl = window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/');
     const possiblePaths = [
+      `${baseUrl}/data/${pageName}.json`,
       `/data/${pageName}.json`,
       `./data/${pageName}.json`,
       `${process.env.PUBLIC_URL || ''}/data/${pageName}.json`,
-      `${window.location.origin}/data/${pageName}.json`
+      `${window.location.origin}/data/${pageName}.json`,
+      `${window.location.origin}/Portfolio/data/${pageName}.json`
     ];
+    
+    console.log(`Attempting to load ${pageName} content...`);
+    console.log('Base URL:', baseUrl);
+    console.log('Possible paths:', possiblePaths);
     
     let response;
     let lastError;
     
     for (const path of possiblePaths) {
       try {
+        console.log(`Trying path: ${path}`);
         response = await fetch(path);
         if (response.ok) {
+          console.log(`Success! Loaded from: ${path}`);
           break;
+        } else {
+          console.log(`Failed with status: ${response.status}`);
         }
       } catch (error) {
         lastError = error;
+        console.log(`Error with path ${path}:`, error.message);
         continue;
       }
     }
