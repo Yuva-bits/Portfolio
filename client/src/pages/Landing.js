@@ -143,10 +143,33 @@ const Landing = () => {
             <div className="md:w-1/2 order-1 md:order-2 mb-8 md:mb-0 relative">
               <div className="rounded-2xl h-96 overflow-hidden mx-auto relative">
                 <img 
-                  src={`${process.env.PUBLIC_URL || ''}/profile.jpeg`}
+                  src={`${window.location.origin}/Portfolio/profile.jpeg`}
                   alt="Yuvashree Senthilmurugan" 
                   className="h-full w-full object-cover rounded-xl"
                   style={{ objectPosition: "center top" }}
+                  onError={(e) => {
+                    console.log('Image failed to load, trying fallback paths...');
+                    const fallbackPaths = [
+                      `${window.location.origin}/profile.jpeg`,
+                      `${process.env.PUBLIC_URL || ''}/profile.jpeg`,
+                      '/profile.jpeg',
+                      './profile.jpeg'
+                    ];
+                    
+                    let currentIndex = 0;
+                    const tryNextPath = () => {
+                      if (currentIndex < fallbackPaths.length) {
+                        e.target.src = fallbackPaths[currentIndex];
+                        console.log(`Trying fallback path: ${fallbackPaths[currentIndex]}`);
+                        currentIndex++;
+                      } else {
+                        console.error('All image paths failed to load');
+                      }
+                    };
+                    
+                    e.target.onerror = tryNextPath;
+                    tryNextPath();
+                  }}
                 />
                 {/* Decorative Glowing Orbs */}
                 <div className="absolute -top-4 -right-4">
