@@ -60,28 +60,29 @@ const Landing = () => {
         </div>
         
         <div className="container mx-auto px-6 z-10 max-w-7xl">
+          {/* Centered Hero Text */}
+          <div className="text-center py-20">
+            <TextReveal
+              text="Hi, I'm Yuvashree Senthilmurugan"
+              animation="fade"
+              delay={0}
+              className="text-5xl lg:text-7xl font-bold gradient-heading mb-6 leading-tight"
+              trigger="mount"
+            />
+            
+            <TextReveal
+              text="Full-Stack Software Developer | AI/ML Engineer | Building Scalable Cloud & Cybersecurity Solutions"
+              animation="fade"
+              delay={100}
+              className="text-xl lg:text-2xl text-gray-200 font-bold leading-relaxed max-w-4xl mx-auto"
+              trigger="mount"
+            />
+          </div>
+          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center py-12">
-            {/* Left Column - Text Content */}
+            {/* Left Column - Description and Buttons */}
             <div className="order-2 lg:order-1 text-center lg:text-left">
               <div className="space-y-8">
-                <div>
-                  <TextReveal
-                    text="Hi, I'm Yuvashree Senthilmurugan"
-                    animation="fade"
-                    delay={0}
-                    className="text-5xl lg:text-7xl font-bold gradient-heading mb-6 leading-tight"
-                    trigger="mount"
-                  />
-                  
-                  <TextReveal
-                    text="Full-Stack Software Developer | AI/ML Engineer | Building Scalable Cloud & Cybersecurity Solutions"
-                    animation="fade"
-                    delay={100}
-                    className="text-xl lg:text-2xl text-gray-200 font-bold leading-relaxed"
-                    trigger="mount"
-                  />
-                </div>
-                
                 <div className="max-w-2xl mx-auto lg:mx-0">
                   <p className="text-lg text-gray-300 leading-relaxed">
                     I build intelligent software solutions combining full-stack engineering, AI/ML, cloud, and cybersecurity to solve complex business challenges. I transform data into actionable insights, creating scalable systems that drive efficiency, enhance security, and enable smarter decision-making.
@@ -95,18 +96,18 @@ const Landing = () => {
                     className="inline-block"
                   >
                     <button className="w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
-                      View My Work
+                  View My Work
                     </button>
-                  </Link>
+                </Link>
                   <Link 
                     to="/about"
                     onClick={() => window.scrollTo(0, 0)}
                     className="inline-block"
                   >
                     <button className="w-full sm:w-auto px-10 py-4 bg-gray-700/50 hover:bg-gray-600/50 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 border border-gray-600/50 hover:border-gray-500/50 backdrop-blur-sm">
-                      About Me
+                  About Me
                     </button>
-                  </Link>
+                </Link>
                 </div>
               </div>
             </div>
@@ -119,10 +120,10 @@ const Landing = () => {
                   <div className="rounded-2xl overflow-hidden relative">
                     <img 
                       src="/Portfolio/profile.jpeg"
-                      alt="Yuvashree Senthilmurugan" 
+                  alt="Yuvashree Senthilmurugan" 
                       className="w-full h-auto object-cover rounded-xl"
-                      style={{ objectPosition: "center top" }}
-                    />
+                  style={{ objectPosition: "center top" }}
+                />
                   </div>
                 </div>
                 {/* Decorative Glowing Orbs */}
