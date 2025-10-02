@@ -6,6 +6,7 @@ import GlowingOrb from '../components/GlowingOrb';
 import { getPageContent } from '../utils/api';
 
 const Landing = () => {
+  console.log('Landing component is rendering');
   const [isVisible, setIsVisible] = useState(false);
   const sectionRefs = useRef([]);
   const [visibleSections, setVisibleSections] = useState([]);
@@ -74,8 +75,10 @@ const Landing = () => {
     return visibleSections.includes(index) ? 'animate-fade-in-up opacity-100' : 'opacity-0';
   };
   
-  return (
-    <div className={`min-h-screen bg-gray-900 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+  // Add error boundary
+  try {
+    return (
+      <div className={`min-h-screen bg-gray-900 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
       <ParticleBackground 
         particleCount={80}
         particleColor="#6366f1"
@@ -534,6 +537,18 @@ const Landing = () => {
       </section>
     </div>
   );
+  } catch (error) {
+    console.error('Error in Landing component:', error);
+    return (
+      <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Hi, I'm Yuvashree Senthilmurugan</h1>
+          <p className="text-xl text-gray-300">Full-Stack Software Developer | AI/ML Engineer</p>
+          <p className="text-red-400 mt-4">Error loading content. Please refresh the page.</p>
+        </div>
+      </div>
+    );
+  }
 };
 
 export default Landing; 
