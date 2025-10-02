@@ -57,8 +57,8 @@ const Landing = () => {
         <div className="container mx-auto px-6 z-10 max-w-7xl">
           {/* Centered Hero Text */}
           <div className="text-center py-12 lg:py-16">
-            <div className="space-y-2">
-              <h1 className="text-4xl md:text-6xl font-bold gradient-heading leading-tight animate-fade-in">
+            <div>
+              <h1 className="text-4xl md:text-6xl font-bold gradient-heading leading-tight animate-fade-in mb-2">
                 Hi, I'm Yuvashree Senthilmurugan
               </h1>
               
@@ -74,7 +74,7 @@ const Landing = () => {
               <div className="space-y-8">
                 <div>
                   <p 
-                    className="text-lg text-gray-300 leading-relaxed"
+                    className="text-xl lg:text-2xl text-gray-300 leading-relaxed"
                     style={{ textAlign: 'justify' }}
                   >
                     I design and deliver intelligent software solutions that combine full-stack engineering, AI/ML, cloud, and cybersecurity. My focus is on transforming complex data into actionable insights and building scalable, user-focused systems that drive efficiency, strengthen security, and enable smarter decision-making. I bridge technical depth with business impact, helping organizations innovate faster, smarter, and at scale.
@@ -88,18 +88,18 @@ const Landing = () => {
                     className="inline-block"
                   >
                     <button className="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
-                      View My Work
+                  View My Work
                     </button>
-                  </Link>
+                </Link>
                   <Link 
                     to="/about"
                     onClick={() => window.scrollTo(0, 0)}
                     className="inline-block"
                   >
                     <button className="w-full sm:w-auto px-8 py-3 bg-gray-700/50 hover:bg-gray-600/50 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 border border-gray-600/50 hover:border-gray-500/50 backdrop-blur-sm">
-                      About Me
+                  About Me
                     </button>
-                  </Link>
+                </Link>
                 </div>
               </div>
             </div>
