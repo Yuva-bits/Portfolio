@@ -44,7 +44,7 @@ const Landing = () => {
       />
       
       {/* Hero Section */}
-      <section className="relative py-24 flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-800/50 to-gray-900/50">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-800/50 to-gray-900/50">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-purple-900/10 to-pink-900/10"></div>
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-500/10 via-purple-500/5 to-transparent"></div>
@@ -60,66 +60,75 @@ const Landing = () => {
         </div>
         
         <div className="container mx-auto px-6 z-10 max-w-7xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center py-12">
             {/* Left Column - Text Content */}
-            <div className="md:w-1/2 order-2 md:order-1 mb-8 md:mb-0">
-            <TextReveal
-              text="Hi, I'm Yuvashree Senthilmurugan"
-                animation="fade"
-                delay={0}
-                className="text-6xl font-bold gradient-heading mb-6"
-              trigger="mount"
-            />
-              
-            <TextReveal
-                text="Full-Stack Software Developer | AI/ML Engineer | Building Scalable Cloud & Cybersecurity Solutions"
-              animation="fade"
-                delay={100}
-                className="text-2xl text-gray-200 font-bold block"
-              trigger="mount"
-            />
-          
-              <p className="text-xl text-gray-300 mb-10 leading-relaxed text-justify">
-                I build intelligent software solutions combining full-stack engineering, AI/ML, cloud, and cybersecurity to solve complex business challenges. I transform data into actionable insights, creating scalable systems that drive efficiency, enhance security, and enable smarter decision-making. My strength lies in bridging deep technical expertise with practical outcomes—delivering solutions that create measurable impact at scale.
-              </p>
-              
-              <div className="flex flex-wrap gap-6">
-                <Link 
-                  to="/projects"
-                  onClick={() => window.scrollTo(0, 0)}
-                >
-                  <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
-                  View My Work
-                  </button>
-                </Link>
-                <Link 
-                  to="/about"
-                  onClick={() => window.scrollTo(0, 0)}
-                >
-                  <button className="px-8 py-4 bg-gray-700 hover:bg-gray-600 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 border border-gray-600 hover:border-gray-500">
-                  About Me
-                  </button>
-                </Link>
+            <div className="order-2 lg:order-1 text-center lg:text-left">
+              <div className="space-y-8">
+                <div>
+                  <TextReveal
+                    text="Hi, I'm Yuvashree Senthilmurugan"
+                    animation="fade"
+                    delay={0}
+                    className="text-5xl lg:text-7xl font-bold gradient-heading mb-6 leading-tight"
+                    trigger="mount"
+                  />
+                  
+                  <TextReveal
+                    text="Full-Stack Software Developer | AI/ML Engineer | Building Scalable Cloud & Cybersecurity Solutions"
+                    animation="fade"
+                    delay={100}
+                    className="text-xl lg:text-2xl text-gray-200 font-bold leading-relaxed"
+                    trigger="mount"
+                  />
+                </div>
+                
+                <div className="max-w-2xl mx-auto lg:mx-0">
+                  <p className="text-lg text-gray-300 leading-relaxed">
+                    I build intelligent software solutions combining full-stack engineering, AI/ML, cloud, and cybersecurity to solve complex business challenges. I transform data into actionable insights, creating scalable systems that drive efficiency, enhance security, and enable smarter decision-making.
+                  </p>
+                </div>
+                
+                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                  <Link 
+                    to="/projects"
+                    onClick={() => window.scrollTo(0, 0)}
+                    className="inline-block"
+                  >
+                    <button className="w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
+                      View My Work
+                    </button>
+                  </Link>
+                  <Link 
+                    to="/about"
+                    onClick={() => window.scrollTo(0, 0)}
+                    className="inline-block"
+                  >
+                    <button className="w-full sm:w-auto px-10 py-4 bg-gray-700/50 hover:bg-gray-600/50 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 border border-gray-600/50 hover:border-gray-500/50 backdrop-blur-sm">
+                      About Me
+                    </button>
+                  </Link>
+                </div>
               </div>
             </div>
             
             {/* Right Column - Image */}
-            <div className="md:w-1/2 order-1 md:order-2 mb-8 md:mb-0 relative">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-xl transform rotate-3"></div>
-                <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-2 border border-gray-700/50">
-                  <div className="rounded-2xl h-96 overflow-hidden relative">
-                <img 
+            <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
+              <div className="relative max-w-md w-full">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl blur-xl transform rotate-3"></div>
+                <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-3xl p-3 border border-gray-700/50 shadow-2xl">
+                  <div className="rounded-2xl overflow-hidden relative">
+                    <img 
                       src="/Portfolio/profile.jpeg"
-                  alt="Yuvashree Senthilmurugan" 
-                  className="h-full w-full object-cover rounded-xl"
-                  style={{ objectPosition: "center top" }}
-                />
+                      alt="Yuvashree Senthilmurugan" 
+                      className="w-full h-auto object-cover rounded-xl"
+                      style={{ objectPosition: "center top" }}
+                    />
                   </div>
                 </div>
                 {/* Decorative Glowing Orbs */}
-                <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-500/30 rounded-full blur-sm animate-pulse"></div>
-                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-purple-500/30 rounded-full blur-sm animate-pulse delay-1000"></div>
+                <div className="absolute -top-6 -right-6 w-12 h-12 bg-blue-500/30 rounded-full blur-sm animate-pulse"></div>
+                <div className="absolute -bottom-6 -left-6 w-10 h-10 bg-purple-500/30 rounded-full blur-sm animate-pulse delay-1000"></div>
+                <div className="absolute top-1/2 -left-4 w-8 h-8 bg-cyan-500/20 rounded-full blur-sm animate-pulse delay-500"></div>
               </div>
             </div>
           </div>
