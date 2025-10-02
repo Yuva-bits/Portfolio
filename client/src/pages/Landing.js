@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import TextReveal from '../components/TextReveal';
 import ParticleBackground from '../components/ParticleBackground';
 
 const Landing = () => {
@@ -59,21 +58,13 @@ const Landing = () => {
           {/* Centered Hero Text */}
           <div className="text-center py-12 lg:py-16">
             <div className="space-y-6">
-            <TextReveal
-              text="Hi, I'm Yuvashree Senthilmurugan"
-                animation="fade"
-                delay={0}
-                className="text-4xl md:text-6xl font-bold gradient-heading leading-tight"
-              trigger="mount"
-            />
+              <h1 className="text-4xl md:text-6xl font-bold gradient-heading leading-tight animate-fade-in">
+                Hi, I'm Yuvashree Senthilmurugan
+              </h1>
               
-            <TextReveal
-                text="Full-Stack Software Developer | AI/ML Engineer | Building Scalable Cloud & Cybersecurity Solutions"
-              animation="fade"
-                delay={100}
-                className="text-base lg:text-lg xl:text-xl text-gray-200 font-bold leading-tight max-w-6xl mx-auto block px-4"
-              trigger="mount"
-            />
+              <p className="text-base lg:text-lg xl:text-xl text-gray-200 font-bold leading-tight max-w-6xl mx-auto block px-4 animate-fade-in">
+                Full-Stack Software Developer | AI/ML Engineer | Building Scalable Cloud & Cybersecurity Solutions
+              </p>
             </div>
           </div>
           
