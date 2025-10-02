@@ -1,0 +1,35 @@
+{
+  "pageName": "experience",
+  "title": "Experience",
+  "description": "experience page content",
+  "sections": [
+    {
+      "title": "Industry Project Intern",
+      "githubLink": "",
+      "documentationLink": "",
+      "text": "<p><strong><em>MealLens Company • Windsor, ON, Canada</em></strong><br><strong><em>Sept 2022 – Aug 2024</em></strong></p><br><br><ul><br><li>Built a full-stack platform powered by SAM 2 and OpenAI CLIP to automate data processing and deliver intelligent content understanding.</li><br><li>Integrated Slack to automate notifications and streamline team workflows, improving collaboration and response time.</li><br><li>Designed and shipped responsive dashboards with interactive visualizations for real time insights, optimizing usability and performance across devices.</li><br><li>Collaborated in an Agile team, contributing to sprint planning, code reviews, and iterative feature delivery.</li><br></ul>",
+      "order": 0
+    },
+    {
+      "title": "Programmer Analyst",
+      "text": "<p><strong><em>Cognizant Technology Solutions • Tamil Nadu, India</em></strong><br><strong><em>Sept 2022 – Aug 2024</em></strong></p><br><br><ul><br><li>Developed and maintained enterprise applications, resolving incidents and implementing feature enhancements.</li><br><li>Provided technical support, leveraging expertise in complex technologies to troubleshoot and boost solutions.</li><br><li>Collaborated with clients and senior developers in design sessions to articulate project specifications and technical requirements by communicating effectively.</li><br><li>Maintained and upgraded existing applications, ensuring seamless functionality and performance.</li><br></ul>",
+      "order": 1,
+      "imageUrl": "",
+      "githubLink": "",
+      "metadata": {},
+      "documentationLink": ""
+    },
+    {
+      "title": "Internship Trainee",
+      "text": "<p><strong><em>Cognizant Technology Solutions • Tamil Nadu, India</em></strong><br><strong><em>Apr 2022 - Aug 2022</em></strong></p><br><br><ul><br><li>Completed internship training in full-stack development with exposure to front-end, back-end, and database technologies.</li><br><li>Gained hands-on experience building applications using Java Spring Boot, Node.js, and MongoDB.</li><br><li>Strengthened problem-solving and coding skills by working on practice projects and real-world development tasks.</li><br></ul>",
+      "order": 2,
+      "imageUrl": "",
+      "githubLink": "",
+      "metadata": {},
+      "documentationLink": "",
+      "description": "",
+      "technologies": []
+    }
+  ],
+  "lastUpdated": "2025-10-01T14:27:34.037436"
+}

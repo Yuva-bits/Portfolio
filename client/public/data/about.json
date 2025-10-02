@@ -1,0 +1,16 @@
+{
+  "pageName": "about",
+  "title": "About",
+  "description": "about page content",
+  "sections": [
+    {
+      "title": "Welcome",
+      "text": "This is the about page. Edit this content to add your information.",
+      "order": 0,
+      "imageUrl": "",
+      "githubLink": "",
+      "metadata": {}
+    }
+  ],
+  "lastUpdated": "2025-05-19T22:52:16.619Z"
+}

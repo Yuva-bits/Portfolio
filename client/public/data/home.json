@@ -1,0 +1,16 @@
+{
+  "pageName": "home",
+  "title": "Hi, I'm Yuvashree Senthilmurugan",
+  "description": "home page content",
+  "sections": [
+    {
+      "title": "",
+      "text": "<p>I design and deliver intelligent software and AI systems that don't just work, they solve real business problems. With expertise across full-stack engineering, AI/ML, and cloud, I turn complex data into scalable, user-focused solutions that improve efficiency, security, and decision-making. From building AI-driven job-skill matching platforms to real-time cybersecurity engines, I bridge the gap between technical depth and business impact—helping organizations innovate faster, smarter, and at scale.</p><p>I'm a Master of Applied Computing student at the University of Windsor with a passion for transforming complex data and systems into clear, practical, and scalable solutions. With professional experience at Cognizant Technology Solutions and hands-on industry projects like MealLens, I bridge the gap between software engineering, data-driven insights, and real-world problem-solving.</p><p>My expertise spans full-stack development, AI/ML, and cloud solutions, with a toolkit that includes Python, Java, React.js, Node.js, TensorFlow, LangChain, Microsoft Azure, and Neo4j. I've built platforms that range from intelligent job-skill matching systems to cybersecurity anomaly detection engines—all designed to automate workflows, enhance decision-making, and deliver user-focused outcomes.</p><p>What sets me apart is my ability to connect technical depth with business impact. Whether developing scalable APIs, optimizing enterprise applications, or designing dashboards that turn raw data into actionable insights, I focus on building solutions that improve efficiency, security, and usability.</p><p>Beyond technical execution, I thrive in collaborative, agile environments—mentoring peers, contributing to code reviews, and ensuring projects move from concept to delivery with precision.</p><p>I help organizations harness software, data, and AI to solve problems that matter—faster, smarter, and at scale.</p><p>Currently, I'm seeking opportunities starting September 2025 to apply my skills in software engineering, data science, or AI development where I can drive innovation and deliver measurable value.</p>",
+      "order": 0,
+      "imageUrl": "",
+      "githubLink": "",
+      "metadata": {}
+    }
+  ],
+  "lastUpdated": "2025-05-20T05:39:07.659Z"
+}

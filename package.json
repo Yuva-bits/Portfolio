@@ -1,0 +1,11 @@
+{
+  "name": "personal-website-static",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install": "cd client && npm install",
+    "preview": "cd client && npx serve -s build -l 3000"
+  }
+}

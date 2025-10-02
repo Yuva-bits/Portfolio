@@ -1,0 +1,26 @@
+{
+  "pageName": "education",
+  "title": "Education",
+  "description": "",
+  "sections": [
+    {
+      "title": "Master of Applied Computing",
+      "githubLink": "",
+      "documentationLink": "",
+      "text": "<p><strong><em>University of Windsor • Windsor, ON, Canada</em></p><br><br><p><em>Sep 2024 - Present</em></strong></p><br><br><p><strong>Relevant Courses: </strong> Advanced Computing Concepts, Advanced Networking and Cybersecurity, Advanced Systems Programming, Advanced Database Techniques, Advanced Software Engineering, Internet Applications and Distributed Systems </p>",
+      "order": 0,
+      "description": "",
+      "technologies": []
+    },
+    {
+      "title": "Bachelor of Engineering, Computer Science",
+      "githubLink": "",
+      "text": "<p><strong><em>Sri Venkateswara College of Engineering • Tamil Nadu, India</em></p><br><br><p><em>Aug 2018 - Jun 2022</em></strong></p><br><br><p><strong>Relevant Courses: </strong> Data Structures, Design and Analysis of Algorithms, Theory of Computation, Database Management System, Data Mining and Data Warehousing, Operating Systems, Computer Networks, Cryptography and Network Security, Software Engineering, Internet of Things and its Applications, Artificial Intelligence,  Machine Learning Techniques, User Interface Technologies, Mobile Computing</p>",
+      "order": 1,
+      "documentationLink": "",
+      "description": "",
+      "technologies": []
+    }
+  ],
+  "lastUpdated": "2025-10-01T14:18:47.315519"
+}
