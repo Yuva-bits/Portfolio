@@ -148,11 +148,8 @@ const Landing = () => {
       {/* Technical Expertise Section */}
       <section id="skills" className="py-24 bg-gradient-to-br from-gray-800/50 to-gray-900/50">
         <div className="container mx-auto px-6 max-w-7xl">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl font-bold gradient-heading mb-6">Technical Expertise</h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              A comprehensive overview of my technical skills and expertise across multiple domains
-            </p>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold gradient-heading">Technical Expertise</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -284,11 +281,8 @@ const Landing = () => {
       {/* Featured Projects Section */}
       <section id="featured-projects" className="py-24 bg-gradient-to-br from-gray-800/50 to-gray-900/50">
         <div className="container mx-auto px-6 max-w-7xl">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl font-bold gradient-heading mb-6">Featured Projects</h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              Explore my latest work showcasing innovative solutions across AI/ML, cybersecurity, and full-stack development
-            </p>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold gradient-heading">Featured Projects</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
