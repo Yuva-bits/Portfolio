@@ -84,7 +84,7 @@ const Landing = () => {
             <div className="order-2 lg:order-1 text-center lg:text-left">
               <div className="space-y-8">
                 <div className="max-w-2xl mx-auto lg:mx-0">
-                  <p className="text-lg text-gray-300 leading-relaxed">
+                  <p className="text-lg text-gray-300 leading-relaxed text-justify">
                     I build intelligent software solutions combining full-stack engineering, AI/ML, cloud, and cybersecurity to solve complex business challenges. I transform data into actionable insights, creating scalable systems that drive efficiency, enhance security, and enable smarter decision-making.
                   </p>
                 </div>
