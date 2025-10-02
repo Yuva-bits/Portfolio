@@ -9,7 +9,8 @@ export const getPageContent = async (pageName) => {
     const possiblePaths = [
       `/data/${pageName}.json`,
       `./data/${pageName}.json`,
-      `${process.env.PUBLIC_URL || ''}/data/${pageName}.json`
+      `${process.env.PUBLIC_URL || ''}/data/${pageName}.json`,
+      `${window.location.origin}/data/${pageName}.json`
     ];
     
     let response;
@@ -28,10 +29,13 @@ export const getPageContent = async (pageName) => {
     }
     
     if (!response || !response.ok) {
+      console.error(`Failed to load ${pageName} content from any path. Last error: ${lastError?.message || 'No response'}`);
+      console.error('Attempted paths:', possiblePaths);
       throw new Error(`Failed to load ${pageName} content from any path. Last error: ${lastError?.message || 'No response'}`);
     }
     
     const data = await response.json();
+    console.log(`Successfully loaded ${pageName} content from:`, response.url);
     return data;
   } catch (error) {
     console.error(`Error loading ${pageName} content:`, error);
