@@ -59,21 +59,21 @@ const Landing = () => {
           {/* Centered Hero Text */}
           <div className="text-center py-12 lg:py-16">
             <div className="space-y-6">
-              <TextReveal
-                text="Hi, I'm Yuvashree Senthilmurugan"
+            <TextReveal
+              text="Hi, I'm Yuvashree Senthilmurugan"
                 animation="fade"
                 delay={0}
                 className="text-4xl md:text-6xl font-bold gradient-heading leading-tight"
-                trigger="mount"
-              />
+              trigger="mount"
+            />
               
-              <TextReveal
+            <TextReveal
                 text="Full-Stack Software Developer | AI/ML Engineer | Building Scalable Cloud & Cybersecurity Solutions"
-                animation="fade"
+              animation="fade"
                 delay={100}
-                className="text-sm lg:text-base xl:text-lg text-gray-200 font-bold leading-tight max-w-6xl mx-auto block px-4"
-                trigger="mount"
-              />
+                className="text-base lg:text-lg xl:text-xl text-gray-200 font-bold leading-tight max-w-6xl mx-auto block px-4"
+              trigger="mount"
+            />
             </div>
           </div>
           
@@ -86,7 +86,7 @@ const Landing = () => {
                     className="text-lg text-gray-300 leading-relaxed"
                     style={{ textAlign: 'justify' }}
                   >
-                    I build intelligent software solutions combining full-stack engineering, AI/ML, cloud, and cybersecurity to solve complex business challenges. I transform data into actionable insights, creating scalable systems that drive efficiency, enhance security, and enable smarter decision-making.
+                    I design and deliver intelligent software solutions that combine full-stack engineering, AI/ML, cloud, and cybersecurity. My focus is on transforming complex data into actionable insights and building scalable, user-focused systems that drive efficiency, strengthen security, and enable smarter decision-making. I bridge technical depth with business impact, helping organizations innovate faster, smarter, and at scale.
                   </p>
                 </div>
                 
@@ -97,18 +97,18 @@ const Landing = () => {
                     className="inline-block"
                   >
                     <button className="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
-                      View My Work
+                  View My Work
                     </button>
-                  </Link>
+                </Link>
                   <Link 
                     to="/about"
                     onClick={() => window.scrollTo(0, 0)}
                     className="inline-block"
                   >
                     <button className="w-full sm:w-auto px-8 py-3 bg-gray-700/50 hover:bg-gray-600/50 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 border border-gray-600/50 hover:border-gray-500/50 backdrop-blur-sm">
-                      About Me
+                  About Me
                     </button>
-                  </Link>
+                </Link>
                 </div>
               </div>
             </div>
