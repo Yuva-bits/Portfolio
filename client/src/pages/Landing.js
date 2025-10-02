@@ -75,10 +75,10 @@ const Landing = () => {
             />
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center py-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start py-12">
             {/* Left Column - Description and Buttons */}
-            <div className="order-2 lg:order-1 text-center lg:text-left">
-              <div className="space-y-8">
+            <div className="order-2 lg:order-1 text-center lg:text-left flex flex-col justify-center">
+              <div className="space-y-6">
                 <div className="max-w-2xl mx-auto lg:mx-0">
                   <p 
                     className="text-lg text-gray-300 leading-relaxed"
@@ -88,47 +88,47 @@ const Landing = () => {
                   </p>
                 </div>
                 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
                   <Link 
                     to="/projects"
                     onClick={() => window.scrollTo(0, 0)}
                     className="inline-block"
                   >
-                    <button className="w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
-                  View My Work
+                    <button className="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
+                      View My Work
                     </button>
-                </Link>
+                  </Link>
                   <Link 
                     to="/about"
                     onClick={() => window.scrollTo(0, 0)}
                     className="inline-block"
                   >
-                    <button className="w-full sm:w-auto px-10 py-4 bg-gray-700/50 hover:bg-gray-600/50 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 border border-gray-600/50 hover:border-gray-500/50 backdrop-blur-sm">
-                  About Me
+                    <button className="w-full sm:w-auto px-8 py-3 bg-gray-700/50 hover:bg-gray-600/50 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 border border-gray-600/50 hover:border-gray-500/50 backdrop-blur-sm">
+                      About Me
                     </button>
-                </Link>
+                  </Link>
                 </div>
               </div>
             </div>
             
             {/* Right Column - Image */}
             <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-              <div className="relative max-w-md w-full">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl blur-xl transform rotate-3"></div>
-                <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-3xl p-3 border border-gray-700/50 shadow-2xl">
-                  <div className="rounded-2xl overflow-hidden relative">
+              <div className="relative w-full max-w-lg">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-xl transform rotate-2"></div>
+                <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-4 border border-gray-700/50 shadow-2xl">
+                  <div className="rounded-xl overflow-hidden relative aspect-[4/3]">
                     <img 
                       src="/Portfolio/profile.jpeg"
                   alt="Yuvashree Senthilmurugan" 
-                      className="w-full h-auto object-cover rounded-xl"
-                  style={{ objectPosition: "center top" }}
+                      className="w-full h-full object-cover rounded-lg"
+                      style={{ objectPosition: "center center" }}
                 />
                   </div>
                 </div>
                 {/* Decorative Glowing Orbs */}
-                <div className="absolute -top-6 -right-6 w-12 h-12 bg-blue-500/30 rounded-full blur-sm animate-pulse"></div>
-                <div className="absolute -bottom-6 -left-6 w-10 h-10 bg-purple-500/30 rounded-full blur-sm animate-pulse delay-1000"></div>
-                <div className="absolute top-1/2 -left-4 w-8 h-8 bg-cyan-500/20 rounded-full blur-sm animate-pulse delay-500"></div>
+                <div className="absolute -top-4 -right-4 w-10 h-10 bg-blue-500/30 rounded-full blur-sm animate-pulse"></div>
+                <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-purple-500/30 rounded-full blur-sm animate-pulse delay-1000"></div>
+                <div className="absolute top-1/2 -left-3 w-6 h-6 bg-cyan-500/20 rounded-full blur-sm animate-pulse delay-500"></div>
               </div>
             </div>
           </div>
