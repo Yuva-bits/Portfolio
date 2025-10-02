@@ -77,20 +77,18 @@ const Landing = () => {
             </div>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start pt-8 pb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center pt-8 pb-16">
             {/* Left Column - Description and Buttons */}
-            <div className="order-2 lg:order-1 text-center lg:text-left flex flex-col justify-center">
-              <div className="space-y-6">
-                <div className="max-w-2xl mx-auto lg:mx-0">
-                  <p 
-                    className="text-lg text-gray-300 leading-relaxed"
-                    style={{ textAlign: 'justify' }}
-                  >
-                    I design and deliver intelligent software solutions that combine full-stack engineering, AI/ML, cloud, and cybersecurity. My focus is on transforming complex data into actionable insights and building scalable, user-focused systems that drive efficiency, strengthen security, and enable smarter decision-making. I bridge technical depth with business impact, helping organizations innovate faster, smarter, and at scale.
-                  </p>
-                </div>
+            <div className="order-2 lg:order-1 text-center lg:text-left">
+              <div className="space-y-8 max-w-2xl mx-auto lg:mx-0">
+                <p 
+                  className="text-lg text-gray-300 leading-relaxed"
+                  style={{ textAlign: 'justify' }}
+                >
+                  I design and deliver intelligent software solutions that combine full-stack engineering, AI/ML, cloud, and cybersecurity. My focus is on transforming complex data into actionable insights and building scalable, user-focused systems that drive efficiency, strengthen security, and enable smarter decision-making. I bridge technical depth with business impact, helping organizations innovate faster, smarter, and at scale.
+                </p>
                 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   <Link 
                     to="/projects"
                     onClick={() => window.scrollTo(0, 0)}
