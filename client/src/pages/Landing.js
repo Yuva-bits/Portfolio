@@ -62,7 +62,7 @@ const Landing = () => {
               text="Hi, I'm Yuvashree Senthilmurugan"
               animation="fade"
               delay={0}
-              className="text-3xl lg:text-5xl font-bold gradient-heading mb-6 leading-tight"
+              className="text-4xl md:text-6xl font-bold gradient-heading mb-6 leading-tight"
               trigger="mount"
             />
             
