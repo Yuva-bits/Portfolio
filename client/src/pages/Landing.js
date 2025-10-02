@@ -7,10 +7,12 @@ import { getPageContent } from '../utils/api';
 
 const Landing = () => {
   console.log('Landing component is rendering');
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible] = useState(true); // Start as visible
   const sectionRefs = useRef([]);
-  const [visibleSections, setVisibleSections] = useState([]);
+  const [visibleSections, setVisibleSections] = useState([0, 1, 2]); // Start with all sections visible
   const [featuredProjects, setFeaturedProjects] = useState([]);
+  
+  console.log('Landing component state:', { isVisible, visibleSections, featuredProjects });
   
   // Fetch featured projects data
   useEffect(() => {
@@ -28,12 +30,7 @@ const Landing = () => {
     fetchFeaturedProjects();
   }, []);
   
-  // Simulate loading state
-  useEffect(() => {
-    setTimeout(() => {
-      setIsVisible(true);
-    }, 300);
-  }, []);
+  // Component is immediately visible - no artificial delay needed
   
   // Intersection Observer for section animations
   useEffect(() => {
@@ -72,13 +69,19 @@ const Landing = () => {
   
   // Get animation class based on visibility
   const getAnimationClass = (index) => {
-    return visibleSections.includes(index) ? 'animate-fade-in-up opacity-100' : 'opacity-0';
+    return 'animate-fade-in-up opacity-100'; // Always visible
   };
   
   // Add error boundary
   try {
+    console.log('Landing component rendering JSX');
     return (
-      <div className={`min-h-screen bg-gray-900 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+      <div className="min-h-screen bg-gray-900">
+      {/* Test div to ensure rendering */}
+      <div className="absolute top-4 left-4 bg-red-500 text-white p-2 z-50">
+        Landing Component Loaded
+      </div>
+      
       <ParticleBackground 
         particleCount={80}
         particleColor="#6366f1"
