@@ -10,6 +10,17 @@ import Projects from './pages/Projects';
 import ProjectDetails from './pages/ProjectDetails';
 
 
+// ScrollToTop component to handle scroll position on route changes
+const ScrollToTop = () => {
+  const location = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+  
+  return null;
+};
+
 // AnimatedRoutes component to handle page transitions
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -50,6 +61,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen flex flex-col bg-gray-900">
         {/* Navigation */}
         <nav className={`bg-gray-900 border-b border-gray-800 shadow-lg sticky top-0 z-10 transition-all duration-500 ${scrolled ? 'py-2 bg-opacity-100 backdrop-blur-xl' : 'py-4 bg-opacity-95'}`}>
@@ -57,7 +69,11 @@ function App() {
             <div className="flex justify-between items-center">
               <div className="flex items-center">
                 <div className="flex-shrink-0 flex items-center">
-                  <Link to="/" className="text-2xl font-bold text-gray-100 hover:text-primary transition-colors">
+                  <Link 
+                    to="/" 
+                    className="text-2xl font-bold text-gray-100 hover:text-primary transition-colors"
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
                     <span className="gradient-heading animate-fade-in">Portfolio</span>
                   </Link>
                 </div>
@@ -69,6 +85,7 @@ function App() {
                         ? "border-indigo-500 text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium" 
                         : "border-transparent text-gray-300 hover:border-gray-300 hover:text-gray-100 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"}`
                     }
+                    onClick={() => window.scrollTo(0, 0)}
                   >
                     Projects
                   </NavLink>
@@ -79,6 +96,7 @@ function App() {
                         ? "border-indigo-500 text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium" 
                         : "border-transparent text-gray-300 hover:border-gray-300 hover:text-gray-100 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"}`
                     }
+                    onClick={() => window.scrollTo(0, 0)}
                   >
                     Experience
                   </NavLink>
@@ -89,6 +107,7 @@ function App() {
                         ? "border-indigo-500 text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium" 
                         : "border-transparent text-gray-300 hover:border-gray-300 hover:text-gray-100 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"}`
                     }
+                    onClick={() => window.scrollTo(0, 0)}
                   >
                     Education
                   </NavLink>
@@ -99,6 +118,7 @@ function App() {
                         ? "border-indigo-500 text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium" 
                         : "border-transparent text-gray-300 hover:border-gray-300 hover:text-gray-100 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"}`
                     }
+                    onClick={() => window.scrollTo(0, 0)}
                   >
                     About
                   </NavLink>
@@ -143,7 +163,10 @@ function App() {
                       ? "bg-gray-800 border-indigo-500 text-white block pl-3 pr-4 py-2 border-l-4 text-base font-medium animate-slide-in animate-delay-1"
                       : "border-transparent text-gray-300 hover:bg-gray-800 hover:border-gray-300 hover:text-white block pl-3 pr-4 py-2 border-l-4 text-base font-medium animate-slide-in animate-delay-1"
                   }
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    window.scrollTo(0, 0);
+                  }}
                 >
                   Projects
                 </NavLink>
@@ -154,7 +177,10 @@ function App() {
                       ? "bg-gray-800 border-indigo-500 text-white block pl-3 pr-4 py-2 border-l-4 text-base font-medium animate-slide-in animate-delay-2"
                       : "border-transparent text-gray-300 hover:bg-gray-800 hover:border-gray-300 hover:text-white block pl-3 pr-4 py-2 border-l-4 text-base font-medium animate-slide-in animate-delay-2"
                   }
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    window.scrollTo(0, 0);
+                  }}
                 >
                   Experience
                 </NavLink>
@@ -165,7 +191,10 @@ function App() {
                       ? "bg-gray-800 border-indigo-500 text-white block pl-3 pr-4 py-2 border-l-4 text-base font-medium animate-slide-in animate-delay-3"
                       : "border-transparent text-gray-300 hover:bg-gray-800 hover:border-gray-300 hover:text-white block pl-3 pr-4 py-2 border-l-4 text-base font-medium animate-slide-in animate-delay-3"
                   }
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    window.scrollTo(0, 0);
+                  }}
                 >
                   Education
                 </NavLink>
@@ -176,7 +205,10 @@ function App() {
                       ? "bg-gray-800 border-indigo-500 text-white block pl-3 pr-4 py-2 border-l-4 text-base font-medium animate-slide-in animate-delay-4"
                       : "border-transparent text-gray-300 hover:bg-gray-800 hover:border-gray-300 hover:text-white block pl-3 pr-4 py-2 border-l-4 text-base font-medium animate-slide-in animate-delay-4"
                   }
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    window.scrollTo(0, 0);
+                  }}
                 >
                   About
                 </NavLink>
@@ -195,7 +227,11 @@ function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="mb-8 md:mb-0">
-                <Link to="/" className="text-2xl font-bold gradient-heading">
+                <Link 
+                  to="/" 
+                  className="text-2xl font-bold gradient-heading"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
                   Portfolio
                 </Link>
                 <p className="text-gray-400 mt-2">

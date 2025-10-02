@@ -129,12 +129,18 @@ const Landing = () => {
               </p>
               
               <div className="flex flex-wrap gap-6">
-                <Link to="/projects">
+                <Link 
+                  to="/projects"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
                   <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
                   View My Work
                   </button>
                 </Link>
-                <Link to="/about">
+                <Link 
+                  to="/about"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
                   <button className="px-8 py-4 bg-gray-700 hover:bg-gray-600 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 border border-gray-600 hover:border-gray-500">
                   About Me
                   </button>
@@ -460,6 +466,7 @@ const Landing = () => {
                           to="/project-details"
                           onClick={() => {
                             sessionStorage.setItem('selectedProject', JSON.stringify(project));
+                            window.scrollTo(0, 0);
                           }}
                           className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-medium rounded-xl transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-blue-500/25"
                         >
@@ -484,6 +491,7 @@ const Landing = () => {
                     to="/projects" 
                     className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                     style={{ color: 'white' }}
+                    onClick={() => window.scrollTo(0, 0)}
                   >
                     <span style={{ color: 'white' }}>Explore All Projects</span>
                     <svg className="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ color: 'white' }}>
