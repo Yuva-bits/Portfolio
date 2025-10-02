@@ -114,7 +114,7 @@ const Landing = () => {
                       src="/Portfolio/profile.jpeg"
                   alt="Yuvashree Senthilmurugan" 
                       className="w-full h-full object-cover rounded-lg"
-                      style={{ objectPosition: "center center" }}
+                      style={{ objectPosition: "center 35%" }}
                 />
                   </div>
                 </div>
