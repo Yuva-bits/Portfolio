@@ -143,33 +143,10 @@ const Landing = () => {
             <div className="md:w-1/2 order-1 md:order-2 mb-8 md:mb-0 relative">
               <div className="rounded-2xl h-96 overflow-hidden mx-auto relative">
                 <img 
-                  src={`${window.location.origin}/Portfolio/profile.jpeg`}
+                  src="/Portfolio/profile.jpeg"
                   alt="Yuvashree Senthilmurugan" 
                   className="h-full w-full object-cover rounded-xl"
                   style={{ objectPosition: "center top" }}
-                  onError={(e) => {
-                    console.log('Image failed to load, trying fallback paths...');
-                    const fallbackPaths = [
-                      `${window.location.origin}/profile.jpeg`,
-                      `${process.env.PUBLIC_URL || ''}/profile.jpeg`,
-                      '/profile.jpeg',
-                      './profile.jpeg'
-                    ];
-                    
-                    let currentIndex = 0;
-                    const tryNextPath = () => {
-                      if (currentIndex < fallbackPaths.length) {
-                        e.target.src = fallbackPaths[currentIndex];
-                        console.log(`Trying fallback path: ${fallbackPaths[currentIndex]}`);
-                        currentIndex++;
-                      } else {
-                        console.error('All image paths failed to load');
-                      }
-                    };
-                    
-                    e.target.onerror = tryNextPath;
-                    tryNextPath();
-                  }}
                 />
                 {/* Decorative Glowing Orbs */}
                 <div className="absolute -top-4 -right-4">
@@ -476,10 +453,10 @@ const Landing = () => {
                             <span style={{ color: 'white' }}>GitHub</span>
                           </a>
                         )}
-                        <button
+                        <Link
+                          to="/project-details"
                           onClick={() => {
                             sessionStorage.setItem('selectedProject', JSON.stringify(project));
-                            window.location.href = '/project-details';
                           }}
                           className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-medium rounded-xl transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-blue-500/25"
                         >
@@ -488,7 +465,7 @@ const Landing = () => {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                           </svg>
                           Details
-                        </button>
+                        </Link>
                       </div>
 
                       {/* Decorative Elements */}
