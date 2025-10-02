@@ -40,7 +40,7 @@ const Landing = () => {
       />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-800/50 to-gray-900/50">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-800/50 to-gray-900/50 py-8">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-purple-900/10 to-pink-900/10"></div>
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-500/10 via-purple-500/5 to-transparent"></div>
@@ -57,25 +57,27 @@ const Landing = () => {
         
         <div className="container mx-auto px-6 z-10 max-w-7xl">
           {/* Centered Hero Text */}
-          <div className="text-center py-16 lg:py-20">
-            <TextReveal
-              text="Hi, I'm Yuvashree Senthilmurugan"
-              animation="fade"
-              delay={0}
-              className="text-4xl md:text-6xl font-bold gradient-heading mb-4 leading-tight"
-              trigger="mount"
-            />
-            
-            <TextReveal
-              text="Full-Stack Software Developer | AI/ML Engineer | Building Scalable Cloud & Cybersecurity Solutions"
-              animation="fade"
-              delay={100}
-              className="text-sm lg:text-base xl:text-lg text-gray-200 font-bold leading-tight max-w-7xl mx-auto block px-4"
-              trigger="mount"
-            />
+          <div className="text-center py-12 lg:py-16">
+            <div className="space-y-6">
+              <TextReveal
+                text="Hi, I'm Yuvashree Senthilmurugan"
+                animation="fade"
+                delay={0}
+                className="text-4xl md:text-6xl font-bold gradient-heading leading-tight"
+                trigger="mount"
+              />
+              
+              <TextReveal
+                text="Full-Stack Software Developer | AI/ML Engineer | Building Scalable Cloud & Cybersecurity Solutions"
+                animation="fade"
+                delay={100}
+                className="text-sm lg:text-base xl:text-lg text-gray-200 font-bold leading-tight max-w-6xl mx-auto block px-4"
+                trigger="mount"
+              />
+            </div>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start py-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start pt-8 pb-16">
             {/* Left Column - Description and Buttons */}
             <div className="order-2 lg:order-1 text-center lg:text-left flex flex-col justify-center">
               <div className="space-y-6">
