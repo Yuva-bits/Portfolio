@@ -303,7 +303,7 @@ const Landing = () => {
                   </h3>
                   
                   {project.description && (
-                    <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                    <p className="text-gray-300 text-sm mb-4 leading-relaxed" style={{ textAlign: 'justify' }}>
                       {project.description}
                     </p>
                   )}
