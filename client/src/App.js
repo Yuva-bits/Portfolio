@@ -60,7 +60,7 @@ function App() {
   }, []);
 
   return (
-    <Router basename="/Portfolio">
+    <Router basename={process.env.NODE_ENV === 'production' ? '/Portfolio' : ''}>
       <ScrollToTop />
       <div className="min-h-screen flex flex-col bg-gray-900">
         {/* Navigation */}
