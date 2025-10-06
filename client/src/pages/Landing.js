@@ -101,6 +101,17 @@ const Landing = () => {
                   About Me
                     </button>
                 </Link>
+                  <button 
+                    onClick={() => {
+                      const contactSection = document.getElementById('contact');
+                      if (contactSection) {
+                        contactSection.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
+                    className="w-full sm:w-auto px-8 py-3 bg-green-600/80 hover:bg-green-500/80 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 border border-green-500/50 hover:border-green-400/50 backdrop-blur-sm"
+                  >
+                    Contact Me
+                  </button>
                 </div>
               </div>
             </div>
