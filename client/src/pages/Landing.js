@@ -11,8 +11,9 @@ const Landing = () => {
   useEffect(() => {
     const fetchFeaturedProjects = async () => {
       try {
-        // Simple fetch without complex API
-        const response = await fetch('/Portfolio/data/projects.json');
+        // Use environment-aware path
+        const basePath = process.env.NODE_ENV === 'production' ? '/Portfolio' : '';
+        const response = await fetch(`${basePath}/data/projects.json`);
         if (response.ok) {
           const data = await response.json();
           const featured = data.sections.slice(0, 3);
@@ -111,7 +112,7 @@ const Landing = () => {
                 <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-4 border border-gray-700/50 shadow-2xl">
                   <div className="rounded-xl overflow-hidden relative aspect-[4/3]">
                     <img 
-                      src="/Portfolio/profile.jpeg"
+                      src={`${process.env.NODE_ENV === 'production' ? '/Portfolio' : ''}/profile.jpeg`}
                   alt="Yuvashree Senthilmurugan" 
                       className="w-full h-full object-cover rounded-lg"
                       style={{ objectPosition: "center 32%" }}
