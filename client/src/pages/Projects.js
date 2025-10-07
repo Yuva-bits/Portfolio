@@ -6,6 +6,7 @@ const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [expandedTech, setExpandedTech] = useState({});
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -27,6 +28,13 @@ const Projects = () => {
   const handleViewDetails = (project) => {
     // Navigate to a project details page with the project data
     navigate('/project-details', { state: { project } });
+  };
+
+  const toggleTechExpansion = (projectTitle) => {
+    setExpandedTech(prev => ({
+      ...prev,
+      [projectTitle]: !prev[projectTitle]
+    }));
   };
 
   if (loading) {
@@ -83,7 +91,7 @@ const Projects = () => {
                 {project.technologies && project.technologies.length > 0 && (
                   <div className="mb-6">
                     <div className="flex flex-wrap gap-2">
-                      {project.technologies.slice(0, 6).map((tech, techIndex) => (
+                      {project.technologies.slice(0, expandedTech[project.title] ? project.technologies.length : 6).map((tech, techIndex) => (
                         <span
                           key={techIndex}
                           className="px-3 py-1 bg-blue-900/40 text-blue-200 rounded-full text-xs font-medium border border-blue-700/30"
@@ -92,9 +100,12 @@ const Projects = () => {
                         </span>
                       ))}
                       {project.technologies.length > 6 && (
-                        <span className="px-3 py-1 bg-gray-700/40 text-gray-300 rounded-full text-xs font-medium border border-gray-600/30">
-                          +{project.technologies.length - 6} more
-                        </span>
+                        <button
+                          onClick={() => toggleTechExpansion(project.title)}
+                          className="px-3 py-1 bg-gray-700/40 text-gray-300 rounded-full text-xs font-medium border border-gray-600/30 hover:bg-gray-600/40 hover:text-gray-200 transition-all duration-200 cursor-pointer"
+                        >
+                          {expandedTech[project.title] ? '- Less' : `+${project.technologies.length - 6} more`}
+                        </button>
                       )}
                     </div>
                   </div>
