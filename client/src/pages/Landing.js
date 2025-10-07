@@ -29,6 +29,30 @@ const Landing = () => {
     fetchFeaturedProjects();
   }, []);
 
+  // Handle hash navigation for contact section
+  useEffect(() => {
+    const handleHashNavigation = () => {
+      if (window.location.hash === '#contact') {
+        setTimeout(() => {
+          const contactSection = document.getElementById('contact');
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 300);
+      }
+    };
+
+    // Check hash on component mount
+    handleHashNavigation();
+
+    // Listen for hash changes
+    window.addEventListener('hashchange', handleHashNavigation);
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashNavigation);
+    };
+  }, []);
+
   const toggleTechExpansion = (projectTitle) => {
     setExpandedTech(prev => ({
       ...prev,
