@@ -122,10 +122,13 @@ function App() {
                   >
                     About
                   </NavLink>
-                  <button
-                    onClick={() => {
-                      // Navigate to landing page with contact hash, then scroll to contact section
-                      window.location.href = '/#contact';
+                  <Link
+                    to="/#contact"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      // Navigate to landing page with React Router
+                      const basePath = process.env.NODE_ENV === 'production' ? '/Portfolio' : '';
+                      window.location.href = `${basePath}/#contact`;
                       // After navigation, scroll to contact section
                       setTimeout(() => {
                         const contactSection = document.getElementById('contact');
@@ -137,7 +140,7 @@ function App() {
                     className="border-transparent text-gray-300 hover:border-gray-300 hover:text-gray-100 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition-colors duration-200"
                   >
                     Contact
-                  </button>
+                  </Link>
                 </div>
               </div>
               
@@ -228,11 +231,14 @@ function App() {
                 >
                   About
                 </NavLink>
-                <button
-                  onClick={() => {
+                <Link
+                  to="/#contact"
+                  onClick={(e) => {
+                    e.preventDefault();
                     setMobileMenuOpen(false);
-                    // Navigate to landing page with contact hash, then scroll to contact section
-                    window.location.href = '/#contact';
+                    // Navigate to landing page with contact hash
+                    const basePath = process.env.NODE_ENV === 'production' ? '/Portfolio' : '';
+                    window.location.href = `${basePath}/#contact`;
                     // After navigation, scroll to contact section
                     setTimeout(() => {
                       const contactSection = document.getElementById('contact');
@@ -244,7 +250,7 @@ function App() {
                   className="border-transparent text-gray-300 hover:bg-gray-800 hover:border-gray-300 hover:text-white block pl-3 pr-4 py-2 border-l-4 text-base font-medium animate-slide-in animate-delay-5 transition-colors duration-200"
                 >
                   Contact
-                </button>
+                </Link>
               </div>
             </div>
           )}
