@@ -6,6 +6,7 @@ const Landing = () => {
   console.log('Landing component is rendering');
   
   const [featuredProjects, setFeaturedProjects] = useState([]);
+  const [expandedTech, setExpandedTech] = useState({});
   
   // Fetch featured projects data
   useEffect(() => {
@@ -27,6 +28,13 @@ const Landing = () => {
     
     fetchFeaturedProjects();
   }, []);
+
+  const toggleTechExpansion = (projectTitle) => {
+    setExpandedTech(prev => ({
+      ...prev,
+      [projectTitle]: !prev[projectTitle]
+    }));
+  };
   
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -308,7 +316,7 @@ const Landing = () => {
                   {project.technologies && project.technologies.length > 0 && (
                     <div className="relative z-10 mb-6">
                       <div className="flex flex-wrap gap-2">
-                        {project.technologies.slice(0, 6).map((tech, techIndex) => (
+                        {project.technologies.slice(0, expandedTech[project.title] ? project.technologies.length : 6).map((tech, techIndex) => (
                           <span 
                             key={techIndex} 
                             className="px-3 py-1.5 bg-gradient-to-r from-blue-900/40 to-purple-900/40 text-blue-200 rounded-full text-xs font-medium border border-blue-700/30 hover:border-blue-500/50 hover:bg-gradient-to-r hover:from-blue-800/50 hover:to-purple-800/50 transition-all duration-300"
@@ -317,9 +325,12 @@ const Landing = () => {
                           </span>
                         ))}
                         {project.technologies.length > 6 && (
-                          <span className="px-3 py-1.5 bg-gradient-to-r from-gray-700/40 to-gray-600/40 text-gray-300 rounded-full text-xs font-medium border border-gray-600/30">
-                            +{project.technologies.length - 6} more
-                          </span>
+                          <button
+                            onClick={() => toggleTechExpansion(project.title)}
+                            className="px-3 py-1.5 bg-gradient-to-r from-gray-700/40 to-gray-600/40 text-gray-300 rounded-full text-xs font-medium border border-gray-600/30 hover:bg-gradient-to-r hover:from-gray-600/50 hover:to-gray-500/50 hover:text-gray-200 transition-all duration-200 cursor-pointer"
+                          >
+                            {expandedTech[project.title] ? '- Less' : `+${project.technologies.length - 6} more`}
+                          </button>
                         )}
                       </div>
                     </div>
