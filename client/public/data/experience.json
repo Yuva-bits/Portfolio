@@ -4,16 +4,23 @@
   "description": "experience page content",
   "sections": [
     {
-      "title": "Industry Project Intern",
+      "title": "AI Intern and Hackathon Winner",
       "githubLink": "",
       "documentationLink": "",
-      "text": "<p><strong><em>MealLens Company • Windsor, ON, Canada</em></strong><br><strong><em>Sept 2022 – Aug 2024</em></strong></p><br><br><ul><br><li>Built a full-stack platform powered by SAM 2 and OpenAI CLIP to automate data processing and deliver intelligent content understanding.</li><br><li>Integrated Slack to automate notifications and streamline team workflows, improving collaboration and response time.</li><br><li>Designed and shipped responsive dashboards with interactive visualizations for real time insights, optimizing usability and performance across devices.</li><br><li>Collaborated in an Agile team, contributing to sprint planning, code reviews, and iterative feature delivery.</li><br></ul>",
+      "text": "<p><strong><em>Jaguar Land Rover and University of Windsor • Windsor, ON, Canada</em></strong></p><br><p><strong><em>Sep 2025 – Jan 2026</em></strong></p><br><br><ul><br><li>Designed and shipped an ML-powered bug detection platform that automatically flags performance-regression commits and risky functions in large Java codebases, cutting out the manual triage work that slows down industrial CI/CD pipelines. Delivered as a live web app with real-time, function-level risk scoring.</li><br><li>Built a multi-stage pipeline covering version-control mining, AST parsing and static analysis, CodeBERT embeddings fused with Graph Attention Networks through a learned gating layer, and SHAP feature selection across 1,500+ signals. Extended from Java-based code analysis to include Python-based code analysis with ensemble stacking (GAT + MLP + CodeBERT meta-learned via LightGBM) and neural explainability.</li><br><li>Hit 91.67% PR-AUC and 0.786 MCC on the LightGBM champion model across 55,300+ function-level samples. The CodeBERT-GAT model matched the full-fine-tuned performance of CodeBERT with just 400K parameters, making it 312x more efficient and genuinely production-ready.</li><br></ul>",
       "order": 0
     },
     {
+      "title": "Industry Project Intern",
+      "githubLink": "",
+      "documentationLink": "",
+      "text": "<p><strong><em>MealLens Company and University of Windsor • Windsor, ON, Canada</em></strong></p><br><p><strong><em>May 2025 - Aug 2025</em></strong></p><br><br><ul><br><li>Built a full-stack computer vision platform using SAM 2 and OpenAI CLIP to automate ingredient detection and real-time inventory updates across 50,000+ food images, replacing a fully manual identification and tracking process that was previously done by hand.</li><br><li>Replaced email-based team communication with a Slack-integrated notification system across 4 teams, improving turnaround on updates and keeping sprint coordination faster and more consistent for a 4-person core team.</li><br><li>Designed and shipped two responsive, interactive dashboards that gave stakeholders real-time visibility into platform metrics across devices. The product received direct validation from the CEO, who is continuing to build it out beyond the internship.</li><br></ul>",
+      "order": 1
+    },
+    {
       "title": "Programmer Analyst",
-      "text": "<p><strong><em>Cognizant Technology Solutions • Tamil Nadu, India</em></strong><br><strong><em>Sept 2022 – Aug 2024</em></strong></p><br><br><ul><br><li>Developed and maintained enterprise applications, resolving incidents and implementing feature enhancements.</li><br><li>Provided technical support, leveraging expertise in complex technologies to troubleshoot and boost solutions.</li><br><li>Collaborated with clients and senior developers in design sessions to articulate project specifications and technical requirements by communicating effectively.</li><br><li>Maintained and upgraded existing applications, ensuring seamless functionality and performance.</li><br></ul>",
-      "order": 1,
+      "text": "<p><strong><em>Cognizant Technology Solutions • Tamil Nadu, India</em></strong></p><br><p><strong><em>Sept 2022 – Aug 2024</em></strong></p><br><br><ul><br><li>Maintained and contributed to 8 enterprise Java applications while delivering 6 individual feature updates, handling over 20 support tickets and incidents daily across the client base, consistently meeting resolution targets across new development, maintenance, and live incident workflows.</li><br><li>Built and shipped full-stack Java solutions through direct collaboration with clients and senior developers, translating business requirements into technical specifications and implementing updates focused on load time, bug reduction, downtime, and overall user experience.</li><br><li>Mentored two junior developers through knowledge-sharing and hands-on guidance, improving team efficiency and helping them ramp up faster on complex Java systems.</li><br><li>Participated in weekly Agile sprints with cross-functional collaboration across QA and testing teams, and conducted code reviews every 1-2 days, consistently catching bugs before they reached production and keeping code quality high across the team.</li><br></ul>",
+      "order": 2,
       "imageUrl": "",
       "githubLink": "",
       "metadata": {},
@@ -21,8 +28,8 @@
     },
     {
       "title": "Internship Trainee",
-      "text": "<p><strong><em>Cognizant Technology Solutions • Tamil Nadu, India</em></strong><br><strong><em>Apr 2022 - Aug 2022</em></strong></p><br><br><ul><br><li>Completed internship training in full-stack development with exposure to front-end, back-end, and database technologies.</li><br><li>Gained hands-on experience building applications using Java Spring Boot, Node.js, and MongoDB.</li><br><li>Strengthened problem-solving and coding skills by working on practice projects and real-world development tasks.</li><br></ul>",
-      "order": 2,
+      "text": "<p><strong><em>Cognizant Technology Solutions • Tamil Nadu, India</em></strong></p><br><p><strong><em>Apr 2022 - Aug 2022</em></strong></p><br><br><ul><br><li>Completed internship training in full-stack development with exposure to front-end, back-end, and database technologies.</li><br><li>Gained hands-on experience building applications using Java Spring Boot, Node.js, and MongoDB.</li><br><li>Strengthened problem-solving and coding skills by working on practice projects and real-world development tasks.</li><br></ul>",
+      "order": 3,
       "imageUrl": "",
       "githubLink": "",
       "metadata": {},

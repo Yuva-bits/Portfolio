@@ -26,6 +26,10 @@ A modern, responsive portfolio website built with React and Tailwind CSS, featur
 - **Real-time Updates**: Content changes reflect immediately on the website
 - **Rich Text Support**: HTML formatting with proper styling
 
+### Content sync (website vs Tkinter editor)
+- **Shared (editable in Tkinter, reflected on website):** All content in `client/public/data/*.json` is used by both. Edits in the content editor (Experience, Projects, Education, About/Home) are saved to these JSON files and appear on the corresponding website pages after refresh.
+- **Website-only (not in editor):** The Landing page uses some hardcoded content in `client/src/pages/Landing.js`: hero intro paragraph, tagline under your name, and the Technical Expertise skill lists. Profile image is `client/public/profile.jpeg`. To change these, edit `Landing.js` or replace `profile.jpeg`.
+
 ## 🏗️ Project Structure
 
 ```
